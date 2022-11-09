@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
-import Button from "./Button";
+import "./ShoppingCartItem.css";
+import Button from "../Button/Button";
 
 class ShoppingCartItem extends Component {
   render() {

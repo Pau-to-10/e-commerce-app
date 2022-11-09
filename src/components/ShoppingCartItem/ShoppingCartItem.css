@@ -1,0 +1,9 @@
+.shopping__cart__img {
+    width: 100%;
+    min-width: 4rem;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 2rem;
+    object-fit: cover;
+    background-position: center;
+  }

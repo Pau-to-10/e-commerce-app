@@ -1,7 +1,7 @@
 import React from "react";
 
-import ShoppingCartItem from "./ShoppingCartItem";
-import CheckoutButton from "./CheckoutButton";
+import ShoppingCartItem from "../ShoppingCartItem/ShoppingCartItem";
+import CheckoutButton from "../CheckOutButton/CheckoutButton";
 
 function getTotal(cart) {
   return cart.reduce((accum, curr) => {
@@ -55,5 +55,6 @@ function Cart({ cartItems, handleRemove, handleChange }) {
     </aside>
   );
 }
+
 
 export default Cart;

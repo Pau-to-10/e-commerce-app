@@ -2,11 +2,13 @@ import React, { Component } from "react";
 
 import "./App.css";
 
-import ProductCard from "./components/ProductCard";
+import NavBar from "./components/NavBar/NavBar";
+import ProductCard from "./components/ProductCard/ProductCard";
 
 // Render the products dinamically with a loop
-import products from "./product";
-import Cart from "./components/Cart";
+import products from "./assets/db/products";
+import Cart from "./components/Cart/Cart";
+import logo from "./assets/img/logo2.png";
 
 function loadItems() {
   const items = localStorage.getItem("products");
@@ -99,23 +101,24 @@ class App extends Component {
     const { cartItems } = this.state;
 
     return (
+      <>
+      <header> <NavBar /> </header>      
       <main className="container-fluid">
         <div className="row">
           <div className="col col-6 col-lg-8 p-4">
             <section className="row row-cols-1">
-              <div className="col">
-                <h1 className="mb-4">Shop</h1>
+            {/* <video src="https://carontestudio.com/img/f4.mp4" autoplay="true" muted="true" loop="true"></video> */}
+              <div className="col">                
+                <h1 className="mb-4">LoVa</h1>
               </div>
               <div className="col">
                 <div className="row row-cols-1 row-cols-md-2 row-cols-xl-4">
                   {products.map((product) => (
                     <ProductCard
                       key={product.id}
-                      img={product.img}
-                      title={product.title}
+                      img={product.img} title={product.title}
                       price={product.price}
-                      handleAddToCart={() => this.handleAddToCart(product.id)}
-                    />
+                      handleAddToCart={() => this.handleAddToCart(product.id)} />
                   ))}
                 </div>
               </div>
@@ -124,10 +127,9 @@ class App extends Component {
           <Cart
             cartItems={cartItems}
             handleRemove={this.handleRemove}
-            handleChange={this.handleChange}
-          />
+            handleChange={this.handleChange} />
         </div>
-      </main>
+      </main></>
     );
   }
 }

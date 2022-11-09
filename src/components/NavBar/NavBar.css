@@ -1,0 +1,19 @@
+img {
+    height: 100px;
+    width: 100px;
+    border-radius: 1.5rem;
+}
+
+.nav-item {
+    margin-top: 50px;
+  
+}
+
+.nav-link.active {
+    background-color: rgb(234, 197, 197) !important;
+}
+
+.nav-link {
+    color: rgb(234, 197, 197);
+}
+
